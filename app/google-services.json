@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "565635485843",
+    "project_id": "fitbeat-d841c",
+    "storage_bucket": "fitbeat-d841c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565635485843:android:56058b3bd9f3df93d67d66",
+        "android_client_info": {
+          "package_name": "com.example.fitbeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565635485843-dbduts40539jv107jfklbb5ltmtrp9hf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fitbeat",
+            "certificate_hash": "9fae63379c29f2f91c51ed7b1b4c0bfb4d2362f3"
+          }
+        },
+        {
+          "client_id": "565635485843-skfcf3egnmjkuns0aiejdojgshbeqpkm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrj_aQdPggFoCYUzzSypOXIVW0-CzjyjI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565635485843-skfcf3egnmjkuns0aiejdojgshbeqpkm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
