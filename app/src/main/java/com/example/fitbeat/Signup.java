@@ -1,4 +1,4 @@
-package com.example.constraintexample;
+package com.example.fitbeat;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.fitbeat.R;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -23,14 +23,14 @@ public class Signup extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Signup);
+        setContentView(R.layout.activity_signup);
 
         init();
     }
 
     private void init() {
-        emailEt = findViewById(R.id.loginEmail);
-        passEt = findViewById(R.id.loginPass);
+        emailEt = findViewById(R.id.editText);
+        passEt = findViewById(R.id.editText2);
         auth=FirebaseAuth.getInstance();
 
     }
@@ -60,11 +60,11 @@ public class Signup extends AppCompatActivity {
 
     private void loginUser(String email, String pass) {
 
-        auth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(Signup.this, Home.class);
+                    Intent intent = new Intent(Signup.this, MainActivity.class);
                     startActivity(intent);
                 }
                 else

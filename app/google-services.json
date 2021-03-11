@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "565635485843-j9v657b9gpj22fbgin0i822pjqim95m2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fitbeat",
+            "certificate_hash": "9005b74e537f18b7faebe5420949b5dfeebcbcc6"
+          }
+        },
+        {
           "client_id": "565635485843-skfcf3egnmjkuns0aiejdojgshbeqpkm.apps.googleusercontent.com",
           "client_type": 3
         }
