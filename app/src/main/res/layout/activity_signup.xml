@@ -68,10 +68,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.10"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintWidth_percent="0.10"
-        app:srcCompat="@drawable/google"
-        tools:layout_editor_absoluteX="185dp" />
+        app:srcCompat="@drawable/google" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -196,6 +197,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.607"
         app:layout_constraintWidth_percent="0.14"
-        app:srcCompat="@drawable/left_arrow" />
+        app:srcCompat="@drawable/left_arrow"
+        android:onClick="back"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

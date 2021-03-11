@@ -73,4 +73,10 @@ public class Signup extends AppCompatActivity {
         });
 
     }
+
+    public void back(View view) {
+        Intent intent = new Intent(Signup.this, MainActivity.class);
+        startActivity(intent);
+
+    }
 }
