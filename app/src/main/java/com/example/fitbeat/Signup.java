@@ -41,7 +41,7 @@ public class Signup extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 
-    public void loginBtn(View view) {
+    public void signup(View view) {
 
         String email = emailEt.getText().toString();
         String pass = passEt.getText().toString();
@@ -52,19 +52,19 @@ public class Signup extends AppCompatActivity {
             passEt.setError("Password required");
         } else {
 
-            loginUser(email, pass);
+            signup(email, pass);
 
         }
 
     }
 
-    private void loginUser(String email, String pass) {
+    private void signup(String email, String pass) {
 
         auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Intent intent = new Intent(Signup.this, MainActivity.class);
+                    Intent intent = new Intent(Signup.this, Male_female.class);
                     startActivity(intent);
                 }
                 else
@@ -79,4 +79,6 @@ public class Signup extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+
 }

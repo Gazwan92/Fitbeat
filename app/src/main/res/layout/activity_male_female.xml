@@ -103,7 +103,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.607"
         app:layout_constraintWidth_percent="0.14"
-        app:srcCompat="@drawable/left_arrow" />
+        app:srcCompat="@drawable/left_arrow"
+        android:onClick="back"/>
 
     <ImageView
         android:id="@+id/imageView5"

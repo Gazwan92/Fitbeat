@@ -97,6 +97,7 @@
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:onClick="signup"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintHeight_percent="0.07"
