@@ -14,11 +14,16 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Signup extends AppCompatActivity {
+    EditText nameEt;
     EditText emailEt;
     EditText passEt;
     FirebaseAuth auth;
+    FirebaseDatabase database;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +36,10 @@ public class Signup extends AppCompatActivity {
     private void init() {
         emailEt = findViewById(R.id.editText);
         passEt = findViewById(R.id.editText2);
-        auth=FirebaseAuth.getInstance();
+        nameEt = findViewById(R.id.editText3);
+        auth = FirebaseAuth.getInstance();
+        database=FirebaseDatabase.getInstance();
+        reference=database.getReference("User");
 
     }
 
@@ -42,28 +50,38 @@ public class Signup extends AppCompatActivity {
 //    }
 
     public void signup(View view) {
-
+        String name = nameEt.getText().toString();
         String email = emailEt.getText().toString();
         String pass = passEt.getText().toString();
 
-        if (email.isEmpty()) {
+        if (name.isEmpty()) {
+            nameEt.setError("Name required");
+        }
+        else if (email.isEmpty())
+        {
             emailEt.setError("Email required");
-        } else if (pass.isEmpty()) {
+        }
+        else if (pass.isEmpty())
+        {
             passEt.setError("Password required");
-        } else {
+        }
+        else {
 
-            signup(email, pass);
+            signup(name, email, pass);
 
         }
 
     }
 
-    private void signup(String email, String pass) {
+    private void signup(final String name, final String email, final String pass) {
 
         auth.createUserWithEmailAndPassword(email,pass).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    String key=auth.getCurrentUser().getUid();
+                    Userdata user=new Userdata(name,email,pass);
+                    reference.child(key).setValue(user);
                     Intent intent = new Intent(Signup.this, Male_female.class);
                     startActivity(intent);
                 }

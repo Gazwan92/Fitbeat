@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        emailEt = findViewById(R.id.editText4);
-        passEt = findViewById(R.id.editText5);
+        emailEt = findViewById(R.id.editText);
+        passEt = findViewById(R.id.editText2);
         auth = FirebaseAuth.getInstance();
 
     }
