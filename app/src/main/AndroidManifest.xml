@@ -9,8 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Signup"/>
-        <activity android:name=".Male_female"/>
+        <activity android:name=".Caloriecount"></activity>
+        <activity android:name=".Exercise1" />
+        <activity android:name=".Junkfood" />
+        <activity android:name=".Eating1" />
+        <activity android:name=".Weight1" />
+        <activity android:name=".Height1" />
+        <activity android:name=".Signup" />
+        <activity android:name=".Male_female" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

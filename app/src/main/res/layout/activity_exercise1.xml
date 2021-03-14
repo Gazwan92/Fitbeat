@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Male_female">
-
+    tools:context=".Exercise1">
     <EditText
         android:id="@+id/editText"
         android:layout_width="0dp"
@@ -14,7 +13,7 @@
         android:ems="10"
         android:hint="10 Minutes"
         android:inputType="textEmailAddress"
-        android:paddingStart="22dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintHeight_percent="0.08"
@@ -47,6 +46,7 @@
         android:layout_height="0dp"
         android:background="#126FE6"
         android:text="NEXT"
+        android:onClick="nextscreen"
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -72,18 +72,17 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="104dp"
         android:text="Daily exercise duration?"
         android:textColor="#000000"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.05"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintWidth_percent="0.67" />
 
     <ImageView

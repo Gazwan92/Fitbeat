@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Male_female">
 
-    <EditText
+   <EditText
         android:id="@+id/editText"
         android:layout_width="0dp"
         android:layout_height="0dp"

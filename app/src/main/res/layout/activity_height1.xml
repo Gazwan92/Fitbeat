@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Male_female">
-
+    tools:context=".Height1">
     <EditText
         android:id="@+id/editText"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="20dp"
         android:ems="10"
-        android:hint="10 Minutes"
+        android:hint="5.7 Feet"
         android:inputType="textEmailAddress"
-        android:paddingStart="22dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="@+id/button"
         app:layout_constraintHeight_percent="0.08"
@@ -50,6 +49,7 @@
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:onClick="nextscreen"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.07"
@@ -72,19 +72,18 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="104dp"
-        android:text="Daily exercise duration?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Choose your height"
         android:textColor="#000000"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.05"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintWidth_percent="0.67" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.55" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -105,15 +104,18 @@
         app:srcCompat="@drawable/left_arrow" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/imageView7"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/exercise"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/height"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintWidth_percent="0.90" />
+        app:layout_constraintWidth_percent="0.80"
+        app:srcCompat="@drawable/height" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,11 +24,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+        if(auth.getCurrentUser() != null){
+            Intent intent = new Intent(MainActivity.this, Male_female.class);
+            startActivity(intent);
+        }
     }
 
     private void init() {
-        emailEt = findViewById(R.id.editText);
-        passEt = findViewById(R.id.editText2);
+        emailEt = findViewById(R.id.editText4);
+        passEt = findViewById(R.id.editText5);
         auth = FirebaseAuth.getInstance();
 
     }

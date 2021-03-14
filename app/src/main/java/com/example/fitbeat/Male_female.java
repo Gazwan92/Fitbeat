@@ -28,4 +28,9 @@ public class Male_female extends AppCompatActivity {
 
 
     }
+
+    public void nextscreen(View view) {
+        Intent intent = new Intent(Male_female.this, Weight1.class);
+        startActivity(intent);
+    }
 }
