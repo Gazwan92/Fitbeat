@@ -9,14 +9,16 @@ import android.view.View;
 public class Junkfood extends AppCompatActivity {
 
     double junkresult;
+
+    double eatresult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_junkfood);
         Intent intent = getIntent();
-        String eatresult = intent.getStringExtra("eatresult");
-        int junknum = Integer.valueOf(eatresult);
-        junkresult  = (junknum*0.2);
+         eatresult= intent.getIntExtra("eatresult",0);
+        //int junknum = Integer.valueOf(eatresult);
+
 
 
 
@@ -24,6 +26,7 @@ public class Junkfood extends AppCompatActivity {
 
     public void nextscreen(View view) {
 
+        junkresult  = (eatresult*0.2);
         Intent intent = new Intent(Junkfood.this, Exercise1.class);
         intent.putExtra("junkresult",junkresult);
         startActivity(intent);
@@ -31,6 +34,7 @@ public class Junkfood extends AppCompatActivity {
 
     public void nextscreen1(View view) {
         Intent intent = new Intent(Junkfood.this, Exercise1.class);
+        intent.putExtra("junkresult",eatresult);
         startActivity(intent);
     }
 }
