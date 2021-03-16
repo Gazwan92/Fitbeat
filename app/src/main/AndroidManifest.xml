@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splash"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".Loadingscreen" />
         <activity android:name=".Caloriecount" />
         <activity android:name=".Exercise1" />
@@ -19,7 +19,7 @@
         <activity android:name=".Height1" />
         <activity android:name=".Signup" />
         <activity android:name=".Male_female" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
