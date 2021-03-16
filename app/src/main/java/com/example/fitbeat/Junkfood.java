@@ -26,7 +26,7 @@ public class Junkfood extends AppCompatActivity {
 
     public void nextscreen(View view) {
 
-        junkresult  = (eatresult*0.2);
+        junkresult  = ((eatresult*0.2)+eatresult);
         Intent intent = new Intent(Junkfood.this, Exercise1.class);
         intent.putExtra("junkresult",junkresult);
         startActivity(intent);
