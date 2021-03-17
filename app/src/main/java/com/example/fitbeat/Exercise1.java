@@ -28,7 +28,7 @@ public class Exercise1 extends AppCompatActivity {
         String exercise = exerciseEt.getText().toString();
         int exercisenum = Integer.valueOf(exercise);
         exerciseresult = (exercisenum*13.33333);
-        Intent intent = new Intent(Exercise1.this, Caloriecount.class);
+        Intent intent = new Intent(Exercise1.this, Loadingscreen.class);
         intent.putExtra("exerciseresult",exerciseresult);
         intent.putExtra("exerciseresult1",junkResult);
         startActivity(intent);
