@@ -28,7 +28,7 @@ public class Loadingscreen extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },3000);
+        },10000);
 
 
 
